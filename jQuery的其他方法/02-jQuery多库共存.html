@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jQuery.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+<script>
+    $(function(){
+        // $ 符号冲突了
+            // 方案1：用jQuery
+        function $(ele){
+            return document.querySelector(ele);
+        }
+        $('div');
+        console.log($('div'));
+        jQuery.each(jQuery('div'),function(index,Ele){
+            console.log(index);
+            console.log(Ele);
+        });
+            // 方案2：重定义库名儿
+        var Arbitrarily = jQuery.noConflict();
+        Arbitrarily.each(Arbitrarily('div'),function(index,Ele){
+            console.log(index);
+            console.log(Ele);
+        });
+    })
+</script>
+</html>
+
+<!-- 
+    库名儿冲突
+        方案一：用jQuery代替$
+        方案二：用noConflict()方法 重命名 库名儿
+ -->

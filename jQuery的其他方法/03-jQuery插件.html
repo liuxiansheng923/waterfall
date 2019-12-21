@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高度可定制的jQuery瀑布流网格布局插件</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" href="../BootStrap/bootstrap/css/bootstrap.min.css">
+	  <link href='css/style.css' rel='stylesheet'>
+    <script src="../jQuery.min.js"></script>
+    <script src="../BootStrap/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+         img{
+            display: block;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="htmleaf-container">
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Zouhaohao</a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">卖萌 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">撒娇</a></li>
+              <li><a href="#">酷</a></li>
+              <li><a href="#">甜美</a></li>
+              <li><a href="#">御姐</a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="请输入&hellip;">
+              </div>
+              <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" data-toggle="modal" data-target="#mylogin">登录</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#myregister">注册</a></li>
+            </ul>
+            <!-- -登录-模态框 -->
+            <div class="modal fade" tabindex="-1" role="dialog" id="mylogin">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">登录信息</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">邮箱</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入&hellip;">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">密码</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入&hellip;">
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> 记住用户名
+                          </label>
+                        </div>
+                        <button type="submit" class="btn btn-default">提交</button>
+                      </form>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">保存</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <!-- -注册-模态框 -->
+            <div class="modal fade" tabindex="-1" role="dialog" id="myregister">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">注册信息</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <form>
+                        <div class="form-group">
+                          <label for="exampleInputName">姓名</label>
+                          <input type="email" class="form-control" id="exampleInputName" placeholder="请输入&hellip;">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputCountry">国籍</label>
+                          <input type="email" class="form-control" id="exampleInputCountry" placeholder="请输入&hellip;">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputAdress">住址</label>
+                          <input type="email" class="form-control" id="exampleInputAdress" placeholder="请输入&hellip;">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">邮箱</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入&hellip;">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">密码</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入&hellip;">
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> 记住用户名
+                          </label>
+                        </div>
+                        <button type="submit" class="btn btn-default">提交</button>
+                      </form>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">保存</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div>
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">热门</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">排名</a></li>
+          </ul>
+        
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">&hellip;</div>
+            <div role="tabpanel" class="tab-pane" id="profile">&hellip;</div>
+          </div>
+        
+      </div>
+
+      <div id='controls-top'>
+            <div class='control-button one'>Small</div>
+            <div class='control-button two'>Medium</div>
+            <div class='control-button three'>Large</div>
+            <div class='control-button five'>Gutter Off</div>
+            <div class='control-button four'>Gutter On</div>
+            <div class='control-button six'>Optimized</div>
+            <div class='control-button seven'>Ordinal</div>
+            <div class='control-button eight'>Fluid</div>
+            <div class='control-button nine'>Set columns</div>
+            <div class='control-button twelve'>Width 200</div>
+            <div class='control-button eleven'>Width 320</div>
+            <div class='control-button ten'>Clear</div>
+      </div>
+
+        
+
+      <div id='wrapper'>
+            <div class='grid-wrapper'>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/001.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/002.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/003.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/004.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/005.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/006.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/007.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/008.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/009.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/010.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/001.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/002.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/003.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/004.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/005.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/006.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/007.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/008.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/009.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/010.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/001.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/002.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/003.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/004.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/005.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/006.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/007.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/008.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/009.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/010.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/001.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/002.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/003.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/004.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/005.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/006.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/007.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/008.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/009.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/010.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/001.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/002.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/003.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/004.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/005.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/006.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/007.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/008.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/009.jpg'>
+              </div>
+              <div class='grid-item'>
+                <img data-lazy-src='picture/010.jpg'>
+              </div>
+            </div>
+          </div>
+          <!-- 分页 -->
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+        </nav>
+    </div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/EasyLazyload.min.js"></script> 
+</body>
+<script src='js/raf.js'></script>
+<script src='js/jquery.js'></script>
+<script src='js/transit.js'></script>
+<script src='js/velocity.js'></script>
+<script src='js/imgload.adem.js'></script>
+<script src='js/stackgrid.adem.js'></script>
+<script src='js/website.js'></script>
+
+<script>
+    lazyLoadInit({
+        // coverColor:"white",
+        offsetBottom:0,
+        offsetTopm:0,
+        showTime:1100,
+        onLoadBackEnd:function(i,e){
+            console.log("onLoadBackEnd:"+i);
+        }
+        ,onLoadBackStart:function(i,e){
+            console.log("onLoadBackStart:"+i);
+        }
+    });
+</script>
+</html>
+<!-- 
+    jQuery的功能毕竟是有限的，因此需要一些jQuery插件
+        因为是jQuery插件，因此必须要先引入jQuery文件.
+
+    引入插件步骤：
+        1.在相关网站下载插件压缩包
+
+        2.解压打开 index.html 查看源代码
+
+        3.将需要的css、js、img文件复制粘贴到项目上
+
+        4.在查看源代码中复制相关的代码 粘贴到项目html文件中
+
+    图片懒加载：只显示可视区域的图片
+        ！！！引入EasyLazyload.min.js必须写到图片元素的后面
+ -->
